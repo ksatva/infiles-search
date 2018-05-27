@@ -19,7 +19,7 @@ OBJECTIVE: To look for keywords or strings inside UNICODE files in the filesyste
 DOWNLOADING (recommended):
  Download the zip file. 
  Extract.
- Run the program from the downloaded infiles directory (as pwd).
+ Run the program from the downloaded infiles-master directory (as pwd).
 
 RUNNING the Program:
 1) Use python3 to execute the program.
