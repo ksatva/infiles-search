@@ -3,7 +3,7 @@ WRITTEN BY: KISHORE
 DATE: DECEMBER 2017
 
 CONTENTS:
-   dir : infiles
+   dir : infiles-master
  	  L file: infiles.py
  	  L file: README.txt
  	  L file: LICENSE
