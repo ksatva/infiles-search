@@ -10,7 +10,7 @@ CONTENTS:
  	  L dir : searchlog
 		     L file: readme.txt
   
-USAGE: FOR COMMAND LINE USE (BASH OR PYTHON)
+USAGE: FOR COMMAND LINE USE (BASH OR PYTHON3)
 
 VALIDATED: The script infiles.py is written in Python3 and tested successfully in a linux system (Ubuntu). 
 
