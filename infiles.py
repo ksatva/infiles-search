@@ -21,30 +21,22 @@ def infiles():
    
    
    
-   # fUNCTION: Writing search record to a file 'filepath' 
+   # fUNCTION: Writing search record to a file 'filepath'---------------------- 
    def outputfile():
       filename = str(int(time.time()))+'infiles'+'.txt'
         
-      # Enter THE PATH FOR RECORD WRITING (invalid path will lead to !!!ERROR...)
-      filepath = input('Enter Absolute Directory Path to store Search log: ')
-        
-      #ENTER PATH for a permanent log directory and COMMENT OUT line 19, UNCOMMENT line 22
-      #filepath ='...Enter "directory path" for Search log file....' 
-        
-      if not os.path.exists(filepath):
-         print('!!! warning ENTER VALID DIRECTORY PATH...')
-         filepath = input('Enter Absolute Directory Path to store Search log: ')
-         if not os.path.exists(filepath):
-            return -1
-   
+      # Enter THE PATH FOR RECORD WRITING (invalid path will lead to !!!ERROR: searchlog...)
+      filepath ='./searchlog/'    		# For WINDOWS filesystem: Replace ./searchlog/ with .\searchlog\
+      
       filepath = filepath+filename
       return filepath
-     
+    #--------------------------------------------------------------------------
+    
    
    filepath = outputfile()
-   print('Creating search log %s'%filepath)
    try:
       outputdatafile =open(filepath, 'a')
+      print('Creating search log %s'%filepath)
       outputdatafile.write(('search-path: '+path+'\n'+'search-key: '+key+'\n\n'))
    
       fcount=count=exception=0
@@ -87,10 +79,10 @@ def infiles():
       print('TOTAL FILES ATTEMPTS = %d'%fcount)
       print('MATCH in %d files'%count)
       print('EXCEPTION (NON-UNICODE FILES)= %d'%exception)
-      print('RECORD WRITTEN: %s'%filepath)
+      print('LOG WRITTEN: %s'%filepath)
    
    except:
-      print('\n!!!ERROR: CANNOT CREATE RECORD FILE (Invalid path for log file LINE 19)!!!')
+      print('\n!!!ERROR CODE: [searchlog] \nNo searchlog directory(...LINE 29)!!!\nResolve by ceating directory: searchlog (inside infiles directory)\nRefer README:TROUBLESHOOT section')
       
   
 if __name__ == '__main__':
